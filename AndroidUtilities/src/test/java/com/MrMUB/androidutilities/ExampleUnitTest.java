@@ -1,4 +1,4 @@
-package com.example.androidutilities;
+package com.MrMUB.androidutilities;
 
 import org.junit.Test;
 
