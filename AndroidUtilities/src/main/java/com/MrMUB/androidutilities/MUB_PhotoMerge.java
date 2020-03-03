@@ -9,31 +9,30 @@ import android.util.Log;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.util.Random;
 
-public class PhotoMerge {
+public class MUB_PhotoMerge {
 
     Activity activity;
     Bitmap BackgroundPhoto;
     Bitmap ForegroundPhoto;
     Bitmap Result = null;
 
-    public PhotoMerge(Activity activity){
+    public MUB_PhotoMerge(Activity activity){
         this.activity = activity;
     }
 
-    public PhotoMerge setBackgroundPhoto(Bitmap BackgroundPhoto){
+    public MUB_PhotoMerge setBackgroundPhoto(Bitmap BackgroundPhoto){
         this.BackgroundPhoto = BackgroundPhoto;
         return this;
     }
 
-    public PhotoMerge setForegroundPhoto(Bitmap ForegroundPhoto){
+    public MUB_PhotoMerge setForegroundPhoto(Bitmap ForegroundPhoto){
         this.ForegroundPhoto = ForegroundPhoto;
         return this;
     }
 
 
-    public PhotoMerge setPosition(float left,float top){
+    public MUB_PhotoMerge setPosition(float left, float top){
 
         Result = Bitmap.createBitmap(BackgroundPhoto.getWidth(), BackgroundPhoto.getHeight(), BackgroundPhoto.getConfig());
         Canvas canvas = new Canvas(Result);
@@ -49,7 +48,7 @@ public class PhotoMerge {
 
     public String Save() {
 
-        String ImageID = new GenerateChar().setSize(32).generate();
+        String ImageID = new MUB_GenerateChar().setSize(32).generate();
         String root = Environment.getExternalStorageDirectory().toString();
         File myDir = new File(root);
         myDir.mkdirs();

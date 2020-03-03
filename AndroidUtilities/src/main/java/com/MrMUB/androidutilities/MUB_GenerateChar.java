@@ -2,17 +2,17 @@ package com.MrMUB.androidutilities;
 
 import java.util.Random;
 
-public class GenerateChar {
+public class MUB_GenerateChar {
 
     private int sizeOfChar = 15;
     private String allowedChar = "0123456789qwertyuiopasdfghjklzxcvbnmABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    public GenerateChar setSize(int sizeOfChar){
+    public MUB_GenerateChar setSize(int sizeOfChar){
         this.sizeOfChar = sizeOfChar;
         return this;
     }
 
-    public GenerateChar setAllowedChar (String allowedChar){
+    public MUB_GenerateChar setAllowedChar (String allowedChar){
         this.allowedChar = allowedChar;
         return this;
     }

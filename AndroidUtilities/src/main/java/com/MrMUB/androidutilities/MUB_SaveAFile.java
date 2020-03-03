@@ -7,37 +7,37 @@ import android.util.Log;
 import java.io.File;
 import java.io.FileOutputStream;
 
-public class SaveAFile {
+public class MUB_SaveAFile {
 
     private String path = Environment.getExternalStorageDirectory().toString();
-    private String fileName = new GenerateChar().setSize(32).generate();
+    private String fileName = new MUB_GenerateChar().setSize(32).generate();
     private Bitmap.CompressFormat compressFormat = Bitmap.CompressFormat.JPEG;
     private int imageQuality = 75;
     private Bitmap bitmapFile = null;
 
-    String LOG = "SaveAFile";
+    String LOG = "MUB_SaveAFile";
 
-    public SaveAFile setCustomPath(String path){
+    public MUB_SaveAFile setCustomPath(String path){
         this.path = path;
         return this;
     }
 
-    public SaveAFile setFileName(String fileName){
+    public MUB_SaveAFile setFileName(String fileName){
         this.fileName = fileName;
         return this;
     }
 
-    public SaveAFile setBitmap(Bitmap bitmapFile){
+    public MUB_SaveAFile setBitmap(Bitmap bitmapFile){
         this.bitmapFile = bitmapFile;
         return this;
     }
 
-    public SaveAFile setCompressFormat(Bitmap.CompressFormat compressFormat){
+    public MUB_SaveAFile setCompressFormat(Bitmap.CompressFormat compressFormat){
         this.compressFormat = compressFormat;
         return this;
     }
 
-    public SaveAFile setImageQuality(int imageQuality){
+    public MUB_SaveAFile setImageQuality(int imageQuality){
         this.imageQuality = imageQuality;
         return this;
     }

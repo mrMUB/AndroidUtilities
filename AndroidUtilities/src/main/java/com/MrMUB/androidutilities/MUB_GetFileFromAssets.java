@@ -9,18 +9,18 @@ import android.util.Log;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class GetFileFromAssets {
+public class MUB_GetFileFromAssets {
 
     Context context;
     String assetName;
 
-    String LOG = "GetFileFromAssets";
+    String LOG = "MUB_GetFileFromAssets";
 
-    public GetFileFromAssets(Context context){
+    public MUB_GetFileFromAssets(Context context){
         this.context = context;
     }
 
-    public GetFileFromAssets setAssetName(String assetName ){
+    public MUB_GetFileFromAssets setAssetName(String assetName ){
         this.assetName = assetName;
         return this;
     }
