@@ -47,28 +47,9 @@ public class MUB_PhotoMerge {
     }
 
     public String Save() {
-
-        String ImageID = new MUB_GenerateChar().setSize(32).generate();
-        String root = Environment.getExternalStorageDirectory().toString();
-        File myDir = new File(root);
-        myDir.mkdirs();
-        String fname = "/Image-" + ImageID+ ".jpg";
-        File file = new File(myDir, fname);
-        if (file.exists()) {
-            file.delete();
-            Log.i("LOAD", "exist");
-        }
-        Log.i("LOAD", root + fname);
-        try {
-            FileOutputStream out = new FileOutputStream(file);
-            Result.compress(Bitmap.CompressFormat.JPEG, 100, out);
-            out.flush();
-            out.close();
-            Log.i("LOAD", "Saved: "+root + fname);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return root + fname;
+        return new MUB_SaveAFile()
+                .setBitmap(Result)
+                .BitmapToImage();
     }
 
 }
